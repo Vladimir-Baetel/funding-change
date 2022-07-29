@@ -59,6 +59,11 @@ header nav .nav-btn {
   background-color: #17273d;
   text-decoration: none;
   border-radius: 30px;
+  transition: transform 250ms ease-in-out;
+}
+header nav .nav-btn:hover {
+  transform: scale(1.05);
+  transition: transform 250ms ease-in-out;
 }
 header nav .nav-btn span {
   color: white;
@@ -91,6 +96,11 @@ header .main-header .header-cta .cta-btn {
   background-color: #17273d;
   text-decoration: none;
   border-radius: 30px;
+  transition: transform 250ms ease-in-out;
+}
+header .main-header .header-cta .cta-btn:hover {
+  transform: scale(1.05);
+  transition: transform 250ms ease-in-out;
 }
 header .main-header .header-cta .cta-btn span {
   color: white;
@@ -178,6 +188,14 @@ main .main-section .cta {
   border: 2px solid #17273d;
   text-decoration: none;
   border-radius: 30px;
+  transition: all 250ms ease-in-out;
+}
+main .main-section .cta:hover {
+  background-color: #17273d;
+  transition: all 250ms ease-in-out;
+}
+main .main-section .cta:hover span {
+  color: white;
 }
 main .main-section .cta span {
   color: #17273d;
@@ -188,76 +206,157 @@ main .faq-section {
   padding: 6.875rem 0;
   background-color: #fdf4e9;
 }
-main .faq-section .faq {
+main .faq-section .wrapper {
+  gap: 4rem;
+}
+main .faq-section .wrapper .faq {
   width: 100%;
 }
-main .faq-section .faq h1 {
+main .faq-section .wrapper .faq h1 {
   margin-bottom: 1.25rem;
   font-size: 2rem;
   color: #17273d;
   text-transform: uppercase;
 }
-main .faq-section .faq .container {
+main .faq-section .wrapper .faq .container {
   gap: 1rem;
 }
-main .faq-section .faq .container .item {
+main .faq-section .wrapper .faq .container .item {
   gap: 1rem;
 }
-main .faq-section .faq .container .item .icon {
+main .faq-section .wrapper .faq .container .item .icon {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 0.25rem;
   background-color: white;
 }
-main .faq-section .faq .container .item .icon img {
+main .faq-section .wrapper .faq .container .item .icon img {
   height: 1.5rem;
   width: 1.5rem;
 }
-main .faq-section .faq .container .item p {
+main .faq-section .wrapper .faq .container .item p {
   color: #130f0a;
 }
-main .faq-section .testimonial {
+main .faq-section .wrapper .testimonial {
   width: 100%;
-  padding: 3.25rem;
   background-color: white;
   border-radius: 2.5rem;
+}
+main .faq-section .wrapper .testimonial .inner {
+  height: 100%;
+  padding: 3.25rem;
   justify-content: space-between;
 }
-main .faq-section .testimonial .quote {
+main .faq-section .wrapper .testimonial .quote {
   width: 2rem;
 }
-main .faq-section .testimonial .review {
+main .faq-section .wrapper .testimonial .review {
   color: #130f0a;
   font-size: 1.75rem;
 }
-main .faq-section .testimonial .container {
+main .faq-section .wrapper .testimonial .container {
   justify-content: space-between;
 }
-main .faq-section .testimonial .container .user {
+main .faq-section .wrapper .testimonial .container .user {
   gap: 1.5rem;
 }
-main .faq-section .testimonial .container .user .container {
+main .faq-section .wrapper .testimonial .container .user .container {
   gap: 0.25rem;
 }
-main .faq-section .testimonial .container .user .container .name {
+main .faq-section .wrapper .testimonial .container .user .container .name {
   color: #17273d;
   font-weight: 700;
 }
-main .faq-section .testimonial .container .user .container .job {
+main .faq-section .wrapper .testimonial .container .user .container .job {
   color: #130f0a;
 }
-main .faq-section .testimonial .container .dots {
+main .faq-section .wrapper .testimonial .container .dots {
   gap: 0.5rem;
   align-items: flex-end;
   margin-bottom: 0.75rem;
 }
-main .faq-section .testimonial .container .dots .dot {
+main .faq-section .wrapper .testimonial .container .dots .dot {
   height: 0.875rem;
   width: 0.875rem;
   border-radius: 100%;
   background-color: #d9d9d9;
   cursor: pointer;
 }
-main .faq-section .testimonial .container .dots .dot.full {
+main .faq-section .wrapper .testimonial .container .dots .dot.full {
   background-color: #40c1a3;
+}
+main .tab-section {
+  padding: 6.875rem 0;
+  background-color: #d4efff;
+}
+main .tab-section .wrapper {
+  gap: 4rem;
+}
+main .tab-section .wrapper .showcase {
+  width: 100%;
+  background-color: white;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+main .tab-section .wrapper .showcase h2 {
+  color: #130f0a;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+main .tab-section .wrapper .showcase .content {
+  padding: 3.25rem 6.75rem 3.25rem 2.5rem;
+  gap: 1.25rem;
+}
+main .tab-section .wrapper .showcase .content p {
+  color: #130f0a;
+}
+main .tab-section .wrapper .showcase .content a {
+  color: #40c1a3;
+  text-decoration: none;
+  font-weight: 600;
+}
+main .tab-section .wrapper .tabs {
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+main .tab-section .wrapper .tabs h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main .tab-section .wrapper .tabs .container {
+  gap: 1.75rem;
+}
+main .tab-section .wrapper .tabs .container .tab {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  gap: 1rem;
+  border: 2px solid transparent;
+}
+main .tab-section .wrapper .tabs .container .tab.active {
+  border: 2px solid black;
+}
+main .tab-section .wrapper .tabs .container .tab:hover {
+  border: 2px solid black;
+}
+main .tab-section .wrapper .tabs .container .tab p {
+  color: #130f0a;
+  line-height: 1.75rem;
+}
+
+footer {
+  padding: 6.25rem 0;
+  background-color: #1a212c;
+}
+footer .wrapper {
+  gap: 1.25rem;
+}
+footer .wrapper .logo {
+  margin-bottom: 3rem;
+}
+footer .wrapper p {
+  width: 20rem;
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

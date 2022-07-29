@@ -57,6 +57,12 @@ header {
       background-color: $accent;
       text-decoration: none;
       border-radius: 30px;
+      transition: transform 250ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 250ms ease-in-out;
+      }
 
       span {
         color: white;
@@ -92,6 +98,12 @@ header {
         background-color: $accent;
         text-decoration: none;
         border-radius: 30px;
+        transition: transform 250ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 250ms ease-in-out;
+        }
 
         span {
           color: white;
@@ -192,6 +204,16 @@ main {
       border: 2px solid $accent;
       text-decoration: none;
       border-radius: 30px;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        background-color: $accent;
+        transition: all 250ms ease-in-out;
+
+        span {
+          color: white;
+        }
+      }
 
       span {
         color: $accent;
@@ -205,84 +227,93 @@ main {
     padding: 6.875rem 0;
     background-color: #fdf4e9;
 
-    .faq {
-      width: 100%;
+    .wrapper {
+      gap: 4rem;
 
-      h1 {
-        margin-bottom: 1.25rem;
-        font-size: 2rem;
-        color: $accent;
-        text-transform: uppercase;
-      }
-      .container {
-        gap: 1rem;
+      .faq {
+        width: 100%;
 
-        .item {
+        h1 {
+          margin-bottom: 1.25rem;
+          font-size: 2rem;
+          color: $accent;
+          text-transform: uppercase;
+        }
+        .container {
           gap: 1rem;
 
-          .icon {
-            height: 2.5rem;
-            width: 2.5rem;
-            border-radius: 0.25rem;
-            background-color: white;
+          .item {
+            gap: 1rem;
 
-            img {
-              height: 1.5rem;
-              width: 1.5rem;
+            .icon {
+              height: 2.5rem;
+              width: 2.5rem;
+              border-radius: 0.25rem;
+              background-color: white;
+
+              img {
+                height: 1.5rem;
+                width: 1.5rem;
+              }
             }
-          }
-          p {
-            color: $text;
-          }
-        }
-      }
-    }
-    .testimonial {
-      width: 100%;
-      padding: 3.25rem;
-      background-color: white;
-      border-radius: 2.5rem;
-      justify-content: space-between;
-
-      .quote {
-        width: 2rem;
-      }
-      .review {
-        color: $text;
-        font-size: 1.75rem;
-      }
-      .container {
-        justify-content: space-between;
-
-        .user {
-          gap: 1.5rem;
-
-          .container {
-            gap: 0.25rem;
-
-            .name {
-              color: $accent;
-              font-weight: 700;
-            }
-            .job {
+            p {
               color: $text;
             }
           }
         }
-        .dots {
-          gap: 0.5rem;
-          align-items: flex-end;
-          margin-bottom: 0.75rem;
+      }
+      .testimonial {
+        width: 100%;
 
-          .dot {
-            height: 0.875rem;
-            width: 0.875rem;
-            border-radius: 100%;
-            background-color: #d9d9d9;
-            cursor: pointer;
+        background-color: white;
+        border-radius: 2.5rem;
 
-            &.full {
-              background-color: #40c1a3;
+        .inner {
+          height: 100%;
+          padding: 3.25rem;
+          justify-content: space-between;
+        }
+
+        .quote {
+          width: 2rem;
+        }
+        .review {
+          color: $text;
+          font-size: 1.75rem;
+        }
+        .container {
+          justify-content: space-between;
+
+          .user {
+            gap: 1.5rem;
+
+            .container {
+              gap: 0.25rem;
+
+              .name {
+                color: $accent;
+                font-weight: 700;
+              }
+              .job {
+                color: $text;
+              }
+            }
+          }
+          .dots {
+            gap: 0.5rem;
+            align-items: flex-end;
+            margin-bottom: 0.75rem;
+
+            .dot {
+              height: 0.875rem;
+              width: 0.875rem;
+              border-radius: 100%;
+              background-color: #d9d9d9;
+              cursor: pointer;
+
+              &.full {
+                background-color: #40c1a3;
+              }
             }
           }
         }
@@ -290,6 +321,95 @@ main {
     }
   }
 
-  .tabs-section {
+  .tab-section {
+    padding: 6.875rem 0;
+    background-color: #d4efff;
+
+    .wrapper {
+      gap: 4rem;
+
+      .showcase {
+        width: 100%;
+        background-color: white;
+        border-radius: 2.5rem;
+        overflow: hidden;
+
+        h2 {
+          color: $text;
+          font-size: 1.75rem;
+          font-weight: 500;
+        }
+
+        .content {
+          padding: 3.25rem 6.75rem 3.25rem 2.5rem;
+          gap: 1.25rem;
+
+          p {
+            color: $text;
+          }
+
+          a {
+            color: #40c1a3;
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+      }
+      .tabs {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 2.5rem;
+
+        h1 {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+
+        .container {
+          gap: 1.75rem;
+
+          .tab {
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            border-radius: 2.5rem;
+            gap: 1rem;
+            border: 2px solid transparent;
+
+            &.active {
+              border: 2px solid black;
+            }
+            &:hover {
+              border: 2px solid black;
+            }
+
+            p {
+              color: $text;
+              line-height: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+
+footer {
+  padding: 6.25rem 0;
+  background-color: #1a212c;
+
+  .wrapper {
+    gap: 1.25rem;
+
+    .logo {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      width: 20rem;
+      color: white;
+      text-align: center;
+    }
   }
 }
