@@ -346,22 +346,22 @@ main .tab-section .wrapper .showcase .tab-content.active {
   display: block;
 }
 main .tab-section .wrapper .showcase #tab-1 > .banner {
-  background-image: url("/assets/banner_tab1.jpg");
+  background-image: url("assets/banner_tab1.jpg");
 }
 main .tab-section .wrapper .showcase #tab-2 > .banner {
-  background-image: url("/assets/banner_tab2.jpg");
+  background-image: url("assets/banner_tab2.jpg");
 }
 main .tab-section .wrapper .showcase #tab-3 > .banner {
-  background-image: url("/assets/banner_tab3.jpg");
+  background-image: url("assets/banner_tab3.jpg");
 }
 main .tab-section .wrapper .showcase #tab-4 > .banner {
-  background-image: url("/assets/banner_tab4.jpg");
+  background-image: url("assets/banner_tab4.jpg");
 }
 main .tab-section .wrapper .showcase #tab-5 > .banner {
-  background-image: url("/assets/banner_tab5.jpg");
+  background-image: url("assets/banner_tab5.jpg");
 }
 main .tab-section .wrapper .showcase #tab-6 > .banner {
-  background-image: url("/assets/banner_tab6.jpg");
+  background-image: url("assets/banner_tab6.jpg");
 }
 main .tab-section .wrapper .showcase .banner {
   width: 100%;
