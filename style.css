@@ -70,6 +70,11 @@ header nav .nav-btn span {
   font-weight: 600;
   font-size: 0.875rem;
 }
+@media (max-width: 428px) {
+  header .main-header {
+    flex-direction: column;
+  }
+}
 header .main-header .header-cta {
   width: 100%;
   position: relative;
@@ -141,6 +146,11 @@ main .main-section .partners .container {
   margin-top: 3.75rem;
   gap: 2rem;
 }
+@media (max-width: 428px) {
+  main .main-section .partners .container {
+    flex-direction: column;
+  }
+}
 main .main-section .partners .container .box {
   height: 11.375rem;
   width: 11.375rem;
@@ -160,6 +170,11 @@ main .main-section .about {
 main .main-section .about .container {
   margin-top: 3.75rem;
   gap: 2rem;
+}
+@media (max-width: 428px) {
+  main .main-section .about .container {
+    flex-direction: column;
+  }
 }
 main .main-section .about .container .card {
   width: 100%;
@@ -209,6 +224,11 @@ main .faq-section {
 main .faq-section .wrapper {
   gap: 4rem;
 }
+@media (max-width: 428px) {
+  main .faq-section .wrapper {
+    flex-direction: column;
+  }
+}
 main .faq-section .wrapper .faq {
   width: 100%;
 }
@@ -239,6 +259,7 @@ main .faq-section .wrapper .faq .container .item p {
 }
 main .faq-section .wrapper .testimonial {
   width: 100%;
+  position: relative;
   background-color: white;
   border-radius: 2.5rem;
 }
@@ -246,6 +267,10 @@ main .faq-section .wrapper .testimonial .inner {
   height: 100%;
   padding: 3.25rem;
   justify-content: space-between;
+  display: none;
+}
+main .faq-section .wrapper .testimonial .inner.active {
+  display: flex;
 }
 main .faq-section .wrapper .testimonial .quote {
   width: 2rem;
@@ -260,6 +285,14 @@ main .faq-section .wrapper .testimonial .container {
 main .faq-section .wrapper .testimonial .container .user {
   gap: 1.5rem;
 }
+main .faq-section .wrapper .testimonial .container .user .icon {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+main .faq-section .wrapper .testimonial .container .user .icon img {
+  width: 100%;
+  border-radius: 100%;
+}
 main .faq-section .wrapper .testimonial .container .user .container {
   gap: 0.25rem;
 }
@@ -270,19 +303,22 @@ main .faq-section .wrapper .testimonial .container .user .container .name {
 main .faq-section .wrapper .testimonial .container .user .container .job {
   color: #130f0a;
 }
-main .faq-section .wrapper .testimonial .container .dots {
+main .faq-section .wrapper .testimonial .dots {
   gap: 0.5rem;
   align-items: flex-end;
   margin-bottom: 0.75rem;
+  position: absolute;
+  right: 3.5rem;
+  bottom: 3.5rem;
 }
-main .faq-section .wrapper .testimonial .container .dots .dot {
+main .faq-section .wrapper .testimonial .dots .dot {
   height: 0.875rem;
   width: 0.875rem;
   border-radius: 100%;
   background-color: #d9d9d9;
   cursor: pointer;
 }
-main .faq-section .wrapper .testimonial .container .dots .dot.full {
+main .faq-section .wrapper .testimonial .dots .dot.full {
   background-color: #40c1a3;
 }
 main .tab-section {
@@ -292,11 +328,47 @@ main .tab-section {
 main .tab-section .wrapper {
   gap: 4rem;
 }
+@media (max-width: 428px) {
+  main .tab-section .wrapper {
+    flex-direction: column;
+  }
+}
 main .tab-section .wrapper .showcase {
   width: 100%;
   background-color: white;
   border-radius: 2.5rem;
   overflow: hidden;
+}
+main .tab-section .wrapper .showcase .tab-content {
+  display: none;
+}
+main .tab-section .wrapper .showcase .tab-content.active {
+  display: block;
+}
+main .tab-section .wrapper .showcase #tab-1 > .banner {
+  background-image: url("/assets/banner_tab1.jpg");
+}
+main .tab-section .wrapper .showcase #tab-2 > .banner {
+  background-image: url("/assets/banner_tab2.jpg");
+}
+main .tab-section .wrapper .showcase #tab-3 > .banner {
+  background-image: url("/assets/banner_tab3.jpg");
+}
+main .tab-section .wrapper .showcase #tab-4 > .banner {
+  background-image: url("/assets/banner_tab4.jpg");
+}
+main .tab-section .wrapper .showcase #tab-5 > .banner {
+  background-image: url("/assets/banner_tab5.jpg");
+}
+main .tab-section .wrapper .showcase #tab-6 > .banner {
+  background-image: url("/assets/banner_tab6.jpg");
+}
+main .tab-section .wrapper .showcase .banner {
+  width: 100%;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 main .tab-section .wrapper .showcase h2 {
   color: #130f0a;
@@ -333,6 +405,7 @@ main .tab-section .wrapper .tabs .container .tab {
   border-radius: 2.5rem;
   gap: 1rem;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 main .tab-section .wrapper .tabs .container .tab.active {
   border: 2px solid black;

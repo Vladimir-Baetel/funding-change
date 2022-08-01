@@ -2,6 +2,17 @@ $accent: #17273d;
 $text: #130f0a;
 $font: "Montserrat", sans-serif;
 
+@mixin mobile {
+  @media (max-width: 428px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -73,6 +84,10 @@ header {
   }
 
   .main-header {
+    @include mobile {
+      flex-direction: column;
+    }
+
     .header-cta {
       width: 100%;
       position: relative;
@@ -153,6 +168,10 @@ main {
         margin-top: 3.75rem;
         gap: 2rem;
 
+        @include mobile {
+          flex-direction: column;
+        }
+
         .box {
           height: 11.375rem;
           width: 11.375rem;
@@ -175,6 +194,10 @@ main {
       .container {
         margin-top: 3.75rem;
         gap: 2rem;
+
+        @include mobile {
+          flex-direction: column;
+        }
 
         .card {
           width: 100%;
@@ -230,6 +253,10 @@ main {
     .wrapper {
       gap: 4rem;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       .faq {
         width: 100%;
 
@@ -264,7 +291,7 @@ main {
       }
       .testimonial {
         width: 100%;
-
+        position: relative;
         background-color: white;
         border-radius: 2.5rem;
 
@@ -272,6 +299,11 @@ main {
           height: 100%;
           padding: 3.25rem;
           justify-content: space-between;
+          display: none;
+        }
+
+        .inner.active {
+          display: flex;
         }
 
         .quote {
@@ -287,6 +319,16 @@ main {
           .user {
             gap: 1.5rem;
 
+            .icon {
+              width: 3.75rem;
+              height: 3.75rem;
+
+              img {
+                width: 100%;
+                border-radius: 100%;
+              }
+            }
+
             .container {
               gap: 0.25rem;
 
@@ -299,21 +341,24 @@ main {
               }
             }
           }
-          .dots {
-            gap: 0.5rem;
-            align-items: flex-end;
-            margin-bottom: 0.75rem;
+        }
+        .dots {
+          gap: 0.5rem;
+          align-items: flex-end;
+          margin-bottom: 0.75rem;
+          position: absolute;
+          right: 3.5rem;
+          bottom: 3.5rem;
 
-            .dot {
-              height: 0.875rem;
-              width: 0.875rem;
-              border-radius: 100%;
-              background-color: #d9d9d9;
-              cursor: pointer;
+          .dot {
+            height: 0.875rem;
+            width: 0.875rem;
+            border-radius: 100%;
+            background-color: #d9d9d9;
+            cursor: pointer;
 
-              &.full {
-                background-color: #40c1a3;
-              }
+            &.full {
+              background-color: #40c1a3;
             }
           }
         }
@@ -328,11 +373,50 @@ main {
     .wrapper {
       gap: 4rem;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       .showcase {
         width: 100%;
         background-color: white;
         border-radius: 2.5rem;
         overflow: hidden;
+
+        .tab-content {
+          display: none;
+        }
+
+        .tab-content.active {
+          display: block;
+        }
+
+        #tab-1 > .banner {
+          background-image: url("/assets/banner_tab1.jpg");
+        }
+        #tab-2 > .banner {
+          background-image: url("/assets/banner_tab2.jpg");
+        }
+        #tab-3 > .banner {
+          background-image: url("/assets/banner_tab3.jpg");
+        }
+        #tab-4 > .banner {
+          background-image: url("/assets/banner_tab4.jpg");
+        }
+        #tab-5 > .banner {
+          background-image: url("/assets/banner_tab5.jpg");
+        }
+        #tab-6 > .banner {
+          background-image: url("/assets/banner_tab6.jpg");
+        }
+
+        .banner {
+          width: 100%;
+          height: 20rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
 
         h2 {
           color: $text;
@@ -374,6 +458,7 @@ main {
             border-radius: 2.5rem;
             gap: 1rem;
             border: 2px solid transparent;
+            cursor: pointer;
 
             &.active {
               border: 2px solid black;
